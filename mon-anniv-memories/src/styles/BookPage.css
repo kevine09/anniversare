@@ -1,0 +1,163 @@
+:root {
+    --book-color: #e74c3c;
+    --book-dark: #c0392b;
+    --paper-color: #f9f3e9;
+    --lines-color: #e8e0d0;
+    --text-color: #5d4037;
+    --highlight: #ff6f3c;
+  }
+  
+  .fullscreen-book-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  .fullscreen-book {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left-page, .right-page {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    color: var(--book-dark);
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  
+  .tornado-icon {
+    color: var(--highlight);
+    font-size: 3rem;
+  }
+  
+  .book-fold {
+    position: relative;
+    width: 40px;
+    background: 
+      linear-gradient(to right, 
+        rgba(0,0,0,0.1) 0%, 
+        transparent 20%, 
+        transparent 80%, 
+        rgba(0,0,0,0.1) 100%),
+      var(--paper-color);
+    box-shadow: 
+      inset -5px 0 15px -5px rgba(0,0,0,0.2),
+      inset 5px 0 15px -5px rgba(0,0,0,0.2);
+  }
+  
+  .messages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  .load-more {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    background: var(--highlight);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+  .cta-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .disappointed-video {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border: 8px solid white;
+  }
+
+  
+  @media (max-width: 768px) {
+    .book-cover {
+      border-left-width: 40px;
+    }
+    
+    .book-spine {
+      left: -40px;
+      width: 40px;
+    }
+    
+    .book-content {
+      flex-direction: column;
+    }
+    
+    .book-fold {
+      width: 100%;
+      height: 20px;
+      background: 
+        linear-gradient(to bottom, 
+          rgba(0,0,0,0.1) 0%, 
+          transparent 20%, 
+          transparent 80%, 
+          rgba(0,0,0,0.1) 100%),
+        var(--paper-color);
+    }
+    
+    .left-page, .right-page {
+      padding: 1rem;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .messages-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    
+    .page-title {
+      font-size: 1.8rem;
+    }
+    
+    .message-form {
+      padding: 1.5rem;
+    }
+    
+    .type-selector {
+      flex-wrap: wrap;
+    }
+    
+    .type-selector button {
+      flex: 1 0 40%;
+    }
+  }

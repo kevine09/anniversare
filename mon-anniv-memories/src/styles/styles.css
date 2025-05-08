@@ -1,0 +1,137 @@
+/* Style de base pour tous les messages */
+.message {
+    position: absolute;
+    padding: 15px;
+    cursor: grab;
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+    transition: all 0.3s ease;
+    max-width: 250px;
+  }
+  
+  .message:active {
+    cursor: grabbing;
+    z-index: 100;
+  }
+  
+  /* Messages texte */
+  .text-message {
+    background: #ffeb3b;
+    border-radius: 0 15px 15px 15px;
+    min-width: 200px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+  }
+  
+  .text-message .icon {
+    font-size: 2rem;
+    color: rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+  }
+  
+  /* Polaroids photos */
+  .polaroid {
+    background: white;
+    padding: 15px 15px 40px;
+    transform: rotate(-2deg);
+    width: 250px;
+  }
+  
+  .polaroid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid #eee;
+  }
+  
+  .polaroid-footer {
+    height: 25px;
+    background: repeating-linear-gradient(
+      0deg,
+      #f5f5f5,
+      #f5f5f5 5px,
+      #e0e0e0 5px,
+      #e0e0e0 10px
+    );
+    margin-top: 15px;
+  }
+  
+  /* Messages audio */
+  .audio-message {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .audio-message .icon {
+    font-size: 1.5rem;
+  }
+  
+  audio {
+    width: 150px;
+    height: 30px;
+  }
+
+  .messages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .message-item {
+    display: flex;
+  }
+  
+  .message-bubble {
+    background: #fff9c4;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    max-width: 80%;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .message-bubble::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #fff9c4;
+  }
+  
+  .message-content {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    color: #5d4037;
+    margin-bottom: 0.5rem;
+  }
+  
+  .message-author {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #8d6e63;
+    text-align: right;
+    font-style: italic;
+  }
+  
+  .no-messages {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #bdbdbd;
+    text-align: center;
+    margin-top: 2rem;
+  }

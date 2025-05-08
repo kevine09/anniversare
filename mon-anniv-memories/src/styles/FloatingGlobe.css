@@ -1,0 +1,72 @@
+.floating-globe {
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Position opposée au livre */
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.2));
+  }
+  
+
+  .globe-icon {
+    font-size: 3.5rem;
+    color: #4CAF50; /* Vert pour la terre */
+    background: white;
+    padding: 15px;
+    border-radius: 50%;
+    border: 3px solid #81C784;
+    box-shadow: 
+      0 0 0 5px rgba(76,175,80,0.3),
+      0 0 20px rgba(76,175,80,0.5) inset;
+    transform-style: preserve-3d;
+  }
+  
+  .hint-text {
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2E7D32;
+    margin-top: 10px;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 150px;
+  }
+  
+  .floating-globe:hover .hint-text {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Animation de rotation du globe */
+  @keyframes rotateGlobe {
+    from { transform: rotateY(0); }
+    to { transform: rotateY(360deg); }
+  }
+  
+  .floating-globe:hover .globe-icon {
+    animation: rotateGlobe 8s linear infinite;
+  }
+  
+  @media (max-width: 768px) {
+    .floating-globe {
+      bottom: 20px;
+      left: 20px;
+    }
+    
+    .globe-icon {
+      font-size: 2.8rem;
+    }
+    
+    .hint-text {
+      font-size: 1.1rem;
+      max-width: 120px;
+    }
+  }

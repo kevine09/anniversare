@@ -1,0 +1,87 @@
+[
+  {
+    "code": "FR",
+    "name": "France",
+    "latlng": [46.2276, 2.2137]
+  },
+  {
+    "code": "US",
+    "name": "États-Unis",
+    "latlng": [37.0902, -95.7129]
+  },
+  {
+    "code": "JP",
+    "name": "Japon",
+    "latlng": [36.2048, 138.2529]
+  },
+  {
+    "code": "CM",
+    "name": "Cameroun",
+    "latlng": [7.3697, 12.3547]
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "latlng": [56.1304, -106.3468]
+  },
+  {
+    "code": "CN",
+    "name": "Chine",
+    "latlng": [35.8617, 104.1954]
+  },
+  {
+    "code": "BR",
+    "name": "Brésil",
+    "latlng": [-14.2350, -51.9253]
+  },
+  {
+    "code": "IN",
+    "name": "Inde",
+    "latlng": [20.5937, 78.9629]
+  },
+  {
+    "code": "AU",
+    "name": "Australie",
+    "latlng": [-25.2744, 133.7751]
+  },
+  {
+    "code": "ZA",
+    "name": "Afrique du Sud",
+    "latlng": [-30.5595, 22.9375]
+  },
+  {
+    "code": "RU",
+    "name": "Russie",
+    "latlng": [61.5240, 105.3188]
+  },
+  {
+    "code": "DE",
+    "name": "Allemagne",
+    "latlng": [51.1657, 10.4515]
+  },
+  {
+    "code": "IT",
+    "name": "Italie",
+    "latlng": [41.8719, 12.5674]
+  },
+  {
+    "code": "MX",
+    "name": "Mexique",
+    "latlng": [23.6345, -102.5528]
+  },
+  {
+    "code": "NG",
+    "name": "Nigéria",
+    "latlng": [9.0820, 8.6753]
+  },
+  {
+    "code": "SA",
+    "name": "Arabie Saoudite",
+    "latlng": [23.8859, 45.0792]
+  },
+  {
+    "code": "KR",
+    "name": "Corée du Sud",
+    "latlng": [35.9078, 127.7669]
+  }
+]

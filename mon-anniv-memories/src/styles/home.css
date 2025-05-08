@@ -1,0 +1,336 @@
+/* src/styles/home.css */
+:root {
+  --color1: #ff4d4d;
+  --color2: #4d79ff;
+  --color3: #ffcc00;
+  --color4: #9933ff;
+  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.parallax-container {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
+  background: var(--bg-gradient);
+  
+}
+
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transform-style: preserve-3d;
+  z-index: -1;
+  padding-top: 70px; /* Ajoute un espace en haut */
+}
+
+.title-container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0,0,0,0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+  font-family: 'Bungee', cursive;
+  font-size: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+h1 span {
+  display: inline-block;
+}
+
+.word1 { color: var(--color1); animation: float 3s ease-in-out infinite; }
+.word2 { color: var(--color2); animation: float 3.5s ease-in-out infinite; }
+.word3 { color: var(--color3); animation: float 4s ease-in-out infinite; }
+.word4 { 
+  color: var(--color4);
+  text-shadow: 0 0 10px rgba(255,255,255,0.5);
+  animation: pulse 2s infinite alternate;
+}
+.year {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  margin-left: 1rem;
+}
+
+.subtitle {
+  font-family: 'Comic Neue', cursive;
+  font-size: 2rem;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-brain { color: var(--color2); animation: spin 5s linear infinite; }
+.icon-wink { color: var(--color1); animation: bounce 1s infinite alternate; }
+.icon-popper {
+  color: var(--color3);
+  font-size: 3rem;
+  margin-left: 1rem;
+  animation: shake 0.5s infinite alternate;
+}
+
+.memory-section {
+  min-height: 100vh;
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+.memory-content {
+  background: rgba(255,255,255,0.9);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.memory-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.memory-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  transform: rotate(-5deg);
+  transition: transform 0.3s;
+}
+
+.memory-content.reverse .memory-img {
+  transform: rotate(5deg);
+}
+
+.memory-img:hover {
+  transform: scale(1.05) rotate(0deg);
+}
+
+.quote {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #333;
+}
+
+
+.map-access {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.map-button {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'Comic Neue', cursive;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: all 0.3s;
+}
+
+.map-button:hover {
+  background: #3e8e41;
+  transform: translateY(-2px);
+}
+
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+  from { transform: rotate(-10deg); }
+  to { transform: rotate(10deg); }
+}
+
+/* Pour mobile */
+@media (max-width: 768px) {
+  .parallax-container {
+    padding-top: 10px;
+  }
+}
+
+/* Home.css - Ajoute à la fin */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .memory-section {
+    padding: 1rem;
+  }
+  
+  .memory-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .memory-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .quote {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Réorganise les éléments flottants pour mobile */
+  .floating-book {
+    right: 15px;
+    bottom: 15px;
+  }
+  
+  .floating-globe {
+    left: 15px;
+    bottom: 80px; /* Place le globe au-dessus du jeu */
+  }
+  
+  .floating-game {
+    left: 15px;
+    bottom: 15px;
+  }
+}
+
+
+/* Ajouts et modifications CSS */
+
+.memory-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem;
+  max-width: 1200px;
+}
+
+.media-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.memory-text {
+  font-family: 'Comic Neue', cursive;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+/* Styles pour les vidéos */
+.memory-img video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Nouvelles sections */
+.section3 {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+}
+
+.section4 {
+  background: rgba(0,0,0,0.1);
+  backdrop-filter: blur(5px);
+}
+
+/* Animation hover améliorée */
+.memory-img {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.memory-img:hover {
+  transform: scale(1.05) rotate(0deg);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .memory-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .media-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .memory-content {
+    padding: 1.5rem;
+  }
+  
+  .quote {
+    font-size: 1.8rem;
+  }
+  
+  .memory-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .memory-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}

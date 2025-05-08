@@ -1,0 +1,19 @@
+.player {
+  position: absolute;
+  width: 32px;
+  height: 48px;
+  z-index: 10;
+  transform-origin: center;
+  transition: transform 0.1s ease-out;
+}
+
+.sprite {
+  width: 100%;
+  height: 100%;
+  background-image: url('src/assets/player-sprite.png'); /* Crée ou choisis un sprite pixel stylé */
+  background-size: cover;
+}
+
+.player.jumping .sprite {
+  filter: brightness(1.2);
+}

@@ -1,0 +1,8 @@
+:root {
+    --primary-color: #ff6f3c;
+    --secondary-color: #1e1e1e;
+    --text-color: #ffffff;
+    --overlay-color: rgba(255, 255, 255, 0.1);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    --border-radius: 10px;
+  }

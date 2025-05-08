@@ -1,0 +1,18 @@
+.enemy {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url('src/assets/enemy.png'); /* Image à importer */
+    background-size: cover;
+    z-index: 40;
+  }
+  
+  .enemy-moving {
+    animation: moveEnemy 3s infinite alternate ease-in-out;
+  }
+  
+  @keyframes moveEnemy {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(80px); }
+  }
+  

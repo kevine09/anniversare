@@ -1,0 +1,53 @@
+.friend-marker {
+    cursor: pointer;
+    transform: translate(-50%, -100%);
+  }
+  
+  .marker-pin {
+    width: 30px;
+    height: 30px;
+    background: #ff6f3c;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .marker-pin::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transform: rotate(45deg);
+  }
+  
+  .marker-avatar {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    top: 5px;
+    left: 5px;
+    transform: rotate(45deg);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ff6f3c;
+  }
+  
+  .marker-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .marker-avatar span {
+    font-size: 0.8rem;
+  }

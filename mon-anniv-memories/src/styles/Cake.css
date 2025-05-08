@@ -1,0 +1,11 @@
+.cake {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background-image: url('src/assets/Cake.PNG'); /* 🎂 */
+    background-size: cover;
+    animation: float 2s infinite ease-in-out;
+    cursor: pointer;
+    z-index: 60;
+  }
+  
